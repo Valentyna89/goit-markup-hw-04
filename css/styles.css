@@ -134,14 +134,15 @@ a {
 .smartphone {
   margin-right: 10px;
 }
-.contacts-link:hover .envelope {
-  fill: var(--accent-color);
-}
-.smartphone:hover,
-.smartphone:focus {
-  fill: var(--accent-color);
-}
 
+.contacts-link:hover .envelope,
+.contacts-link:focus .envelope {
+  fill: var(--accent-color);
+}
+.contacts-link:hover .smartphone,
+.contacts-link:focus .smartphone {
+  fill: var(--accent-color);
+}
 /* Hero */
 
 .hero {
@@ -191,6 +192,7 @@ a {
 .button-primary:focus {
   color: var(--primary-white-color);
   background-color: #188ce8;
+  outline: none;
 }
 
 /* Features */
@@ -216,6 +218,7 @@ a {
 .feature-list {
   display: flex;
 }
+
 .feature-item::before {
   display: block;
   content: '';
@@ -358,10 +361,11 @@ a {
   font-size: 0;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   border: none;
+  border-radius: 50%;
 }
 .icon {
+  fill: #afb1b8;
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -369,6 +373,7 @@ a {
 .social-links:hover,
 .social-links:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 .social-links:hover .icon,
 .social-links:focus .icon {
@@ -407,11 +412,19 @@ a {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
-
 .client-icon {
   width: 106px;
   height: 60px;
-  fill: var(--primary-white-color);
+  fill: #afb1b8;
+}
+.client-links:hover,
+.client-links:focus {
+    outline: none;
+  border-color: var(--accent-color);
+}
+.client-links:hover .client-icon,
+.client-links:focus .client-icon {
+  fill: var(--accent-color);
 }
 /* Portfolio */
 
@@ -526,6 +539,9 @@ a {
   color: var(--accent-color);
 }
 
+.footer .container {
+  display: flex;
+}
 .join {
   font-weight: 700;
   font-size: 14px;
@@ -534,24 +550,42 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  padding-top: 12px;
 }
 
 .footer-social {
-  display: flex;
+  margin-left: 70px;
+  
 }
 
 .footer-social-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
+.footer-social-item + .footer-social-item {
+  margin-left: 10px;
+}
 .footer-social-links {
-  align-items: center;
-  justify-content: center;
-  font-size: 0;
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   border: none;
+
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.footer-icon {
+    fill: var(--primary-white-color);
+    width: 20px;
+    height: 20px;
+}
+.footer-social-links:hover,
+.footer-social-links:focus {
+    outline: none;
+    background-color: var(--accent-color);
 }
