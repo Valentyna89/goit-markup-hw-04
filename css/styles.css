@@ -156,9 +156,13 @@ a {
     ),
     url(../images/Hero.jpg);
   padding: 200px 0;
-
-  background-color: var(--bg-color);
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #C4C4C4;
+  background-repeat: no-repeat;
   text-align: center;
+  background-size: cover;
+
 }
 
 .hero-title {
